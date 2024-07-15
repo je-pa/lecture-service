@@ -1,0 +1,52 @@
+### 관리자가 강의를 등록한다.
+POST http://localhost:8080/api/lectures
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0Iiwicm9sZXMiOlsiQURNSU4iXSwiaWF0IjoxNzIwNzY3NjM4LCJleHAiOjE3MjA3NzEyMzh9.6nVWwWDIo7MsWouUEh8__gaOcudjBTjb7YmY9_wNxoU
+
+{
+  "title": "스프링강의",
+  "price": "20000",
+  "introduction": "스프링 강의",
+  "category": "SPRING",
+  "teacherId": "1"
+}
+
+### 관리자가 강의를 수정한다.
+PUT http://localhost:8080/api/lectures/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0Iiwicm9sZXMiOlsiQURNSU4iXSwiaWF0IjoxNzIwNzY3NjM4LCJleHAiOjE3MjA3NzEyMzh9.6nVWwWDIo7MsWouUEh8__gaOcudjBTjb7YmY9_wNxoU
+
+{
+  "title": "스프링강의",
+  "price": "30000",
+  "introduction": "스프링 강의",
+  "category": "SPRING"
+}
+
+### 강의를 조회한다.
+GET http://localhost:8080/api/lectures/1
+Content-Type: application/json
+
+### 강의 목록을 강의명 오름차순으로 조회한다.
+GET http://localhost:8080/api/lectures?sort=title
+Content-Type: application/json
+
+### 강의 목록을 가격 내림차순으로 조회한다.
+GET http://localhost:8080/api/lectures?sort=price,desc
+Content-Type: application/json
+
+### 선택한 강사가 촬영한 강의 목록을 조회한다.
+GET http://localhost:8080/api/lectures?teacher_id=1
+Content-Type: application/json
+
+### 선택한 카테고리별 강의 목록을 조회한다.
+GET http://localhost:8080/api/lectures?category=SPRING
+Content-Type: application/json
+
+### 선택한 카테고리에 해당하는 선택한 강사가 촬영한 강의 목록을 조회한다.
+GET http://localhost:8080/api/lectures?teacher_id=1&category=REACT
+Content-Type: application/json
+
+### 관리자가 선택한 강의를 삭제한다.
+DELETE http://localhost:8080/api/lectures/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0Iiwicm9sZXMiOlsiQURNSU4iXSwiaWF0IjoxNzIwNzY3NjM4LCJleHAiOjE3MjA3NzEyMzh9.6nVWwWDIo7MsWouUEh8__gaOcudjBTjb7YmY9_wNxoU

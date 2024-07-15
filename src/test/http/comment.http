@@ -1,0 +1,32 @@
+### 인증이 된 사용자가 선택한 강의에 댓글을 작성한다.
+POST http://localhost:8080/api/lectures/1/comments
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE3MjA3Njg2NDUsImV4cCI6MTcyMDc3MjI0NX0.L7N-5DpIcmeJSjKDRsGrVxnJJekc_vmbYsOGBwFWeYA
+
+{
+  "content": "comments1"
+}
+
+### 인증이 된 사용자가 선택한 댓글의 루트 댓글에 댓글을 작성한다.
+POST http://localhost:8080/api/comments/1/comments
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE3MjA3Njg2NDUsImV4cCI6MTcyMDc3MjI0NX0.L7N-5DpIcmeJSjKDRsGrVxnJJekc_vmbYsOGBwFWeYA
+
+{
+  "content": "sd"
+}
+
+
+### 댓글 작성자가 선택한 댓글을 수정한다.
+PATCH http://localhost:8080/api/comments/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE3MjA3Njg2NDUsImV4cCI6MTcyMDc3MjI0NX0.L7N-5DpIcmeJSjKDRsGrVxnJJekc_vmbYsOGBwFWeYA
+
+{
+  "content": "수정"
+}
+
+
+### 댓글 작성자가 선택한 댓글을 삭제한다.
+DELETE http://localhost:8080/api/comments/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwicm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE3MjA3Njg2NDUsImV4cCI6MTcyMDc3MjI0NX0.L7N-5DpIcmeJSjKDRsGrVxnJJekc_vmbYsOGBwFWeYA

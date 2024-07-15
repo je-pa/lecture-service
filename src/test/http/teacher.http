@@ -1,0 +1,32 @@
+### 관리자가 강사를 등록한다.
+POST http://localhost:8080/api/teachers
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0Iiwicm9sZXMiOlsiQURNSU4iXSwiaWF0IjoxNzIwNzY3Mjk1LCJleHAiOjE3MjA3NzA4OTV9.NQ9AuaM3J3kpIBMNC5XVSEhJ87Hu_8FGIXjc9Fj_ung
+
+{
+  "name": "박지은",
+  "careerYears": "5",
+  "company": "TEAM_SPARTA",
+  "phoneNumber": "010-8888-9999",
+  "introduction": "introduction"
+}
+
+### 관리자가 강사를 수정한다.
+PUT http://localhost:8080/api/teachers/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0Iiwicm9sZXMiOlsiQURNSU4iXSwiaWF0IjoxNzIwNzY3Mjk1LCJleHAiOjE3MjA3NzA4OTV9.NQ9AuaM3J3kpIBMNC5XVSEhJ87Hu_8FGIXjc9Fj_ung
+
+{
+  "careerYears": "5",
+  "company": "TEAM_SPARTA",
+  "phoneNumber": "010-8888-9999",
+  "introduction": "introduction"
+}
+
+### 관리자가 선택한 강사를 조회한다.
+GET http://localhost:8080/api/teachers/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0Iiwicm9sZXMiOlsiQURNSU4iXSwiaWF0IjoxNzIwNzY3Mjk1LCJleHAiOjE3MjA3NzA4OTV9.NQ9AuaM3J3kpIBMNC5XVSEhJ87Hu_8FGIXjc9Fj_ung
+
+### 관리자가 선택한 강사를 삭제한다.
+DELETE http://localhost:8080/api/teachers/7
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0Iiwicm9sZXMiOlsiQURNSU4iXSwiaWF0IjoxNzIwNzY3Mjk1LCJleHAiOjE3MjA3NzA4OTV9.NQ9AuaM3J3kpIBMNC5XVSEhJ87Hu_8FGIXjc9Fj_ung
