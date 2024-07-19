@@ -64,7 +64,7 @@ public class LectureLikeService {
     if (lecture.getLikeCount() == null || lecture.getLikeCount() <= 0) {
       throw new CustomException(ExceptionCode.CANNOT_DECREASE_LIKE_COUNT);
     }
-    lecture.decreaseLikeCount();
+    lecture.decreaseLikeCount(); // TODO: 직접 카운팅.
     lectureLikeRepository.delete(lectureLike);
   }
 

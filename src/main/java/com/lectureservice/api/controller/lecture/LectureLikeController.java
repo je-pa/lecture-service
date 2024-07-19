@@ -21,7 +21,7 @@ public class LectureLikeController {
   @Operation(summary = "선택한 강의 좋아요 토글 기능", description = "인증이 된 사용자가 선택한 강의에 좋아요 버튼을 누른다.")
   @PostMapping("/lectures/{lectureId}/likes/toggle")
   public ResponseEntity<Void> toggleLike(@CurrentUserId Long currentUserId,
-      @PathVariable Long lectureId){
+      @PathVariable Long lectureId){ // TODO: 플래그값
     return ResponseEntity.status(lectureLikeService.toggleLike(currentUserId, lectureId)).build();
   }
 
