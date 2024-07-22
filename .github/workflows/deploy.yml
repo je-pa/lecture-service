@@ -30,12 +30,14 @@ jobs:
 
 
 #      # 참고: https://docs.github.com/en/actions/learn-github-actions/variables
+      # $GITHUB_SHA: 커밋의 고유값 사용
+      # $GITHUB_REPOSITORY: repository 명
       - name: Github Actions 자체에 저장되어 있는 변수 사용해보기
         run: |
-          echo $GITHUB_SHA
+          echo $GITHUB_SHA  
           echo $GITHUB_REPOSITORY
 
-#    - name: Github Actions Secret 변수 사용해보기
-#    run: |
-#      echo ${{ secrets.MY_NAME }}
-#      echo ${{ secrets.MY_HOBBY }}
+      - name: Github Actions Secret 변수 사용해보기
+        run: |
+          echo ${{ secrets.MY_NAME }}
+          echo ${{ secrets.MY_HOBBY }}
